@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calendar</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- <p class="mock-up-link">Mock up link <a href="https://dribbble.com/shots/5465486-Calendar-UI#comment-7928835">here</a></p> -->
+
+    <div class="main-container-wrapper">
+      <!-- Header -->
+      <header>
+        <button class="header__btn header__btn--left" title="Menu">
+          <svg
+            class="icon"
+            width="20px"
+            viewBox="0 0 20 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          ></svg>
+        </button>
+        <button class="header__btn header__btn--right" title="Add event">
+          <svg
+            class="icon"
+            width="26px"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          ></svg>
+        </button>
+      </header>
+
+      <!-- Main -->
+      <main>
+        <div class="calendar-container">
+          <div class="calendar-container__header">
+            <button
+              class="calendar-container__btn calendar-container__btn--left"
+              title="Previous"
+            >
+              <i class="icon ion-ios-arrow-back"></i>
+            </button>
+            <h2 class="calendar-container__title">Month Year</h2>
+            <button
+              class="calendar-container__btn calendar-container__btn--right"
+              title="Next"
+            >
+              <i class="icon ion-ios-arrow-forward"></i>
+            </button>
+          </div>
+          <div class="calendar-container__body">
+            <div class="calendar-table">
+              <div class="calendar-table__header">
+                <div class="calendar-table__row">
+                  <div class="calendar-table__col">SU</div>
+                  <div class="calendar-table__col">MO</div>
+                  <div class="calendar-table__col">TU</div>
+                  <div class="calendar-table__col">WE</div>
+                  <div class="calendar-table__col">TH</div>
+                  <div class="calendar-table__col">FR</div>
+                  <div class="calendar-table__col">SA</div>
+                </div>
+              </div>
+              <div class="calendar-table__body"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- events -->
+        <div class="events-container">
+          <span class="error_msg"></span>
+          <!-- Events form -->
+          <div class="add_event">
+            <input
+              type="text"
+              placeholder="Enter event title ..."
+              class="event_input"
+            />
+            <button class="add_event_btn">Add</button>
+            <button class="cancel_event_btn">Cancel</button>
+          </div>
+
+          <!-- Events list -->
+          <ul class="events__list">
+          </ul>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
